@@ -132,10 +132,6 @@ with open(output_file, "w") as out:
     out.write(json.dumps(all))
     out.write("]}")
 
-print 'cwd ='
-print os.getcwd()
-print "output file = " + output_file
-
 call('bzip2 -kf ' + output_file, shell=True)
 
 print('Done!')
